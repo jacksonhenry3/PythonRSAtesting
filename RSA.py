@@ -1,3 +1,10 @@
+
+def exploop(array,power):
+	newarray = []
+	for i in array:
+		newarray.append(int(i**power%N))
+	return(newarray)
+
 ############
 #KEY GENERATION
 def Phi(P,Q):
@@ -25,9 +32,11 @@ d = (k*PhiN+1)/e%N
 
 ############
 #MESSAGE ENCRYPTION
-Message = 3120
-EncryptedMessage = Message**e%N
+Message = [3,1,4,2,5,6,7,9,0,76,5,4,3,5,8]
+
+EncryptedMessage = exploop(Message,e)
 
 #############
 #MESSAGE DECRYPTION
-print(EncryptedMessage**d%N)
+DecryptedMessage = exploop(EncryptedMessage,d)
+print(DecryptedMessage)
