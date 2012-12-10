@@ -1,4 +1,4 @@
-
+#simply to automate some stuff.
 def exploop(array,power):
 	newarray = []
 	for i in array:
