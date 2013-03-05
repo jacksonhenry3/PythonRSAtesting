@@ -9,7 +9,7 @@ def exploop(array,power,N):
 def GeneratePrivateKey(P,Q,e):
 	N = P*Q
 	PhiN = (P-1)*(Q-1)
-	k = 2
+	k = 2 #where does this k come from???
 	d = (k*PhiN+1)/e%N
 	return(d)
 
